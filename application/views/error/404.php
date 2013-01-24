@@ -12,7 +12,7 @@
 <div id="top">
 <div class="wrapper">
     <a href="index.html" title="" class="logo">
-    <img src="/images/logo.png" alt="" width="126" height="38" style="margin-top: -5px;"/>
+        <img src="<?php echo asset('images/logo.png') ?>" alt=""/>
     </a>
 </div>
     <div class="clear"></div>
@@ -24,7 +24,7 @@
         <div class="errorContent">
             <span class="errorDesc"><span class="icon-warning"></span>Oops! Sorry, an error has occured. Page not found!</span>
             <div class="fluid">
-                <a href="/home/index" title="" class="buttonM bLightBlue">Back to dashboard</a>
+                <a href="<?php echo url('/') ?>" title="" class="buttonM bLightBlue">Back to dashboard</a>
             </div>
         </div>
     </div>

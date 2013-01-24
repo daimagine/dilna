@@ -14,7 +14,7 @@
 <div id="top">
     <div class="wrapper">
         <a href="<?php echo url('/') ?>" title="" class="logo">
-            <img src="<?php echo asset('images/logo.png') ?>" alt="" width="126" height="38" style="margin-top: -5px;"/>
+            <img src="<?php echo asset('images/logo.png') ?>" alt=""/>
         </a>
 
         <!-- Right top nav -->
