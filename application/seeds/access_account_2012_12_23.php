@@ -130,6 +130,17 @@ class Seed_Access_account_2012_12_23 extends S2\Seed {
         $child->type = 'L';
         $child->save();
 
+        $child = new Access();
+        $child->parent_id = $access->id;
+        $child->name = 'Account Print';
+        $child->description = 'Account Print';
+        $child->action = 'account@print';
+        $child->status = true;
+        $child->parent = false;
+        $child->visible = false;
+        $child->type = 'L';
+        $child->save();
+
     }
 
     public function order() {

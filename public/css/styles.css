@@ -2344,3 +2344,15 @@ table .dropdown-menu.pull-right { right: auto; left: 0; }
 
 .fixoptTime:first-child { margin-top: 0px; }
 .fixoptTime { margin-top: 20px; }
+
+.logo-image {
+    margin-top: -4px;
+    margin-left: 71px;
+    width: 114px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .logo-image {
+        margin-left: 0px;
+    }
+}
