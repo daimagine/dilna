@@ -66,6 +66,6 @@ class Seed_Access_Service_2012_12_23 extends S2\Seed {
     }
 
     public function order() {
-        return 15;
+        return 11;
     }
 }

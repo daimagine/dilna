@@ -142,6 +142,6 @@ class Seed_Access_asset_2013_01_05 extends S2\Seed {
     }
 
     public function order() {
-        return 13;
+        return 3;
     }
 }

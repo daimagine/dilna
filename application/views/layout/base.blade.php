@@ -13,7 +13,7 @@
     <div id="top">
         <div class="wrapper">
             <a href="{{ url('/') }}" title="" class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="" width="126" height="38" style="margin-top: -5px;"/>
+                <img src="{{ asset('images/logo.png') }}" alt="" />
             </a>
 
             <!-- Right top nav -->
@@ -50,7 +50,12 @@
         <div class="mainNav">
             <div class="user">
                 <a title="" class="leftUserDrop">
-                    <img src="{{ (Auth::user()->picture != null &&  Auth::user()->picture != '') ? '/images/uploads/user/'.Auth::user()->picture : '/images/userLogin.png'}}" alt="" width="72" height="70"/><span></span>
+                    @if(Auth::user()->picture != null &&  Auth::user()->picture != '')
+                        <img src="{{ asset('images/uploads/user/'.Auth::user()->picture) }}" alt="" width="72" height="70"/>
+                    @else
+                        <img src="{{ asset('images/userLogin.png') }}" alt="" width="72" height="70"/>
+                    @endif
+                    <span></span>
                 </a>
                 <span>{{ Auth::user()->name }}</span>
                 <ul class="leftUser">

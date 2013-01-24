@@ -19,7 +19,7 @@
 <div id="top">
     <div class="wrapper">
         <a href="#" title="" class="logo">
-            <img src="{{ asset('images/logo.png') }}" alt="" width="126" height="38" style="margin-top: -5px;"/>
+            <img src="{{ asset('images/logo.png') }}" alt=""/>
         </a>
 
         <!-- Right top nav -->

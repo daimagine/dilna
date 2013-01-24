@@ -4,15 +4,17 @@ $(function() {
     $(".select").chosen();
 
     //===== Dual select boxes =====//
-    $.configureBoxes();
+    try {
+        $.configureBoxes();
+    } catch (e) {}
 
 });
 
 
 function roleSelect() {
     var id = $('#role-select').find(':selected').val();
-    var uri = '/role/access/' + id;
-    if(id !== '0')
+    var uri = 'access/' + id;
+    if(id !== '0') //console.log(uri);
         location.href = uri;
 }
 
