@@ -31,9 +31,9 @@ class Seed_Access_asset_2013_01_05 extends S2\Seed {
         $s->save();
 
         $s = new Access();
-        $s->name = 'Asset Add';
-        $s->description = 'Asset Add';
-        $s->action = 'asset@add';
+        $s->name = 'Asset Type List';
+        $s->description = 'Asset Type List';
+        $s->action = 'asset@list_asset_type';
         $s->status = true;
         $s->parent = false;
         $s->visible = true;

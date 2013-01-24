@@ -10,18 +10,18 @@
 class Seed_Access_2012_12_15 extends S2\Seed {
 
     public function grow() {
-        $access = new Access();
-        $access->name = 'Home';
-        $access->description = 'Home Page';
-        $access->action = 'home/index';
-        $access->status = true;
-        $access->parent = false;
-        $access->visible = true;
-        $access->type = 'M';
-        $access->save();
+//        $access = new Access();
+//        $access->name = 'Home';
+//        $access->description = 'Home Page';
+//        $access->action = 'home/index';
+//        $access->status = true;
+//        $access->parent = false;
+//        $access->visible = true;
+//        $access->type = 'M';
+//        $access->save();
     }
 
     public function order() {
-        return 1;
+//        return 1;
     }
 }

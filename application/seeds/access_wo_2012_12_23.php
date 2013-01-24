@@ -42,6 +42,17 @@ class Seed_Access_Wo_2012_12_23 extends S2\Seed {
         $s->parent_id = $parent->id;
         $s->save();
 
+        $s = new Access();
+        $s->name = 'Add Simple Transaction';
+        $s->description = 'Add Simple Transaction';
+        $s->action = 'work_order@add_simple_trx';
+        $s->status = true;
+        $s->parent = false;
+        $s->visible = true;
+        $s->type = 'S';
+        $s->parent_id = $parent->id;
+        $s->save();
+
         $l = new Access();
         $l->name = 'Work Order to invoice';
         $l->description = 'Work Order to invoice';

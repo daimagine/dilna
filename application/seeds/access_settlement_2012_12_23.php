@@ -31,16 +31,16 @@ class Seed_Access_settlement_2012_12_23 extends S2\Seed {
         $child->type = 'S';
         $child->save();
 
-        $child = new Access();
-        $child->parent_id = $access->id;
-        $child->name = 'Settlement Add';
-        $child->description = 'Settlement Management Add';
-        $child->action = 'settlement@add';
-        $child->status = true;
-        $child->parent = false;
-        $child->visible = true;
-        $child->type = 'S';
-        $child->save();
+//        $child = new Access();
+//        $child->parent_id = $access->id;
+//        $child->name = 'Settlement Add';
+//        $child->description = 'Settlement Management Add';
+//        $child->action = 'settlement@add';
+//        $child->status = true;
+//        $child->parent = false;
+//        $child->visible = true;
+//        $child->type = 'S';
+//        $child->save();
 
         $child = new Access();
         $child->parent_id = $access->id;
