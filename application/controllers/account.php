@@ -252,10 +252,12 @@ class Account_Controller extends Secure_Controller {
         $due_time = date(AccountTransaction::$timeformat, strtotime($account->due_date));
         $items = $account->items;
         $accounts = Account::allSelect(array(
-            'category' => array('<>', AccountCategory::ACCOUNTING)
+//            'category' => array('=', AccountCategory::ITEM)
+            'type' => array('=', $type)
         ));
         $accountAccountings = Account::allSelect(array(
-            'category' => array('=', AccountCategory::ACCOUNTING)
+            'category' => array('=', AccountCategory::ACCOUNTING),
+            'type' => array('=', $type)
         ));
 
         return $this->layout->nest('content', 'account.account_transaction.edit', array(
