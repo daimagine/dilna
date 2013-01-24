@@ -7,9 +7,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-class Seed_Access_asset_2012_12_23 extends S2\Seed {
+class Seed_Access_asset_2013_01_05 extends S2\Seed {
     public function grow() {
-        $parent = new AssetActiva();
+        $parent = new Access();
         $parent->name = 'Asset';
         $parent->description = 'Asset index';
         $parent->action = 'asset@index';
@@ -19,7 +19,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $parent->type = 'M';
         $parent->save();
 
-        $s = new AssetActiva();
+        $s = new Access();
         $s->name = 'Asset Approved Invoice';
         $s->description = 'Asset Approved Invoice';
         $s->action = 'asset@list_approved';
@@ -30,7 +30,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $s->parent_id = $parent->id;
         $s->save();
 
-        $s = new AssetActiva();
+        $s = new Access();
         $s->name = 'Asset Add';
         $s->description = 'Asset Add';
         $s->action = 'asset@add';
@@ -41,7 +41,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $s->parent_id = $parent->id;
         $s->save();
 
-        $s = new AssetActiva();
+        $s = new Access();
         $s->name = 'Asset List';
         $s->description = 'Asset List';
         $s->action = 'asset@list';
@@ -52,7 +52,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $s->parent_id = $parent->id;
         $s->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Approved Process';
         $l->description = 'Item Approved Process';
         $l->action = 'asset@approved_action';
@@ -63,7 +63,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Add New Approved Item';
         $l->description = 'Put Item For Approved';
         $l->action = 'asset@putnewitem';
@@ -74,7 +74,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Edit';
         $l->description = 'Item Edit';
         $l->action = 'asset@edit';
@@ -85,7 +85,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Delete';
         $l->description = 'Item Delete';
         $l->action = 'asset@delete';
@@ -96,7 +96,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Detail Approved';
         $l->description = 'Item Detail Approved';
         $l->action = 'asset@detailApproved';
@@ -107,7 +107,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Add List Approved Item';
         $l->description = 'Item Add List Approved Item';
         $l->action = 'asset@add_approved_item';
@@ -118,7 +118,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item Approved Detail';
         $l->description = 'Item Approved Detail';
         $l->action = 'asset@detail_approved';
@@ -129,7 +129,7 @@ class Seed_Access_asset_2012_12_23 extends S2\Seed {
         $l->parent_id = $parent->id;
         $l->save();
 
-        $l = new AssetActiva();
+        $l = new Access();
         $l->name = 'Item List approved';
         $l->description = 'Item List approved';
         $l->action = 'asset@lst_item';

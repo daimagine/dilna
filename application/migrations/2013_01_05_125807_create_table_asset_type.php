@@ -10,13 +10,13 @@ class Create_Table_Asset_Type {
 	public function up()
 	{
         //asset_type
-        Schema::create('asset_type', function($table) {
-            $table->increments('id');
-            $table->string('name', 80);
-            $table->string('description', 255);
-            $table->boolean('status')->default(true);
-            $table->timestamps();
-        });
+//        Schema::create('asset_type', function($table) {
+//            $table->increments('id');
+//            $table->string('name', 80);
+//            $table->string('description', 255);
+//            $table->boolean('status')->default(true);
+//            $table->timestamps();
+//        });
 	}
 
 	/**
@@ -26,9 +26,9 @@ class Create_Table_Asset_Type {
 	 */
 	public function down()
 	{
-        Schema::drop(array(
-            'asset_type',
-        ));
+//        Schema::drop(array(
+//            'asset_type',
+//        ));
 	}
 
 }

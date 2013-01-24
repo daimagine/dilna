@@ -115,21 +115,48 @@ class Seed_Default_Data_2012_12_25 extends S2\Seed {
         $role = Role::find($roleAdmin->id);
         $success = Role::configureAccess($role, $data);
 
-        //-------
+        //------- save new user -----------
         $user = new User;
+        $user->id = 0;
         $user->role_id = $roleAdmin->id;
         $user->login_id = 'admin';
         $user->password = Hash::make('admin');
         $user->status = true;
         $user->name = 'Administrator';
-        $user->staff_id = 'bna-001';
-        $user->address1 = 'jl. Rawa Buaya, Condet';
-        $user->address2 = 'jakardah';
-        $user->city = 'Jakarta';
+        $user->staff_id = 'AC-000';
+        $user->address1 = 'Jl. T. Rawa Buaya no.9 djakarta';
+        $user->address2 = '';
+        $user->city = 'Djakarta';
         $user->phone1 = '08561271065';
         $user->phone2 = '087782197234';
         $user->save();
 
+        //-------- save default dummy customer for simple transaction ---------------
+        $customer = new Customer;
+        $customer->id = 1;
+        $customer->name = 'Account Dummy';
+        $customer->status = true;
+        $customer->address1 = 'djakarta';
+        $customer->address2 = 'djakarta';
+        $customer->city = 'djakarta';
+        $customer->post_code = '12220';
+        $customer->phone1 = '6281574372311';
+        $customer->phone2 = '6281574372311';
+        $customer->additional_info = 'opo wae boleeeh';
+        $customer->save();
+
+        //------------save default vehicle ----------------------
+        $vehicle = new Vehicle;
+        $vehicle->number = 'BOO4YA';
+        $vehicle->customer_id = $customer->id;
+        $vehicle->status = true;
+        $vehicle->type = 'jeep';
+        $vehicle->color = 'black';
+        $vehicle->model = 'jeep';
+        $vehicle->brand = 'jeep';
+        $vehicle->description = 'jeep ajiiip dah mobil-nya';
+        $vehicle->year = '2000';
+        $vehicle->save();
     }
 
 

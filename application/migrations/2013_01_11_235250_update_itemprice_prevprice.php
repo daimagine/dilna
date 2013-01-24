@@ -9,9 +9,9 @@ class Update_Itemprice_Prevprice {
 	 */
     public function up()
     {
-        Schema::table('item_price', function($table) {
-            $table->decimal('prev_price', 14, 2)->default(0);
-        });
+//        Schema::table('item_price', function($table) {
+//            $table->decimal('prev_price', 14, 2)->default(0);
+//        });
     }
 
     /**
@@ -21,8 +21,8 @@ class Update_Itemprice_Prevprice {
      */
     public function down()
     {
-        Schema::table('item_price', function($table) {
-            $table->drop_column(array('prev_price'));
-        });
+//        Schema::table('item_price', function($table) {
+//            $table->drop_column(array('prev_price'));
+//        });
     }
 }
